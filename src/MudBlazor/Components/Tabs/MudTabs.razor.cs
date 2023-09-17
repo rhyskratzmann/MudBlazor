@@ -270,6 +270,20 @@ namespace MudBlazor
         public TabHeaderPosition HeaderPosition { get; set; } = TabHeaderPosition.After;
 
         /// <summary>
+        /// A render fragment that is added before the tabs inside the header panel of the tab control
+        /// </summary>
+        [Parameter]
+        [Category(CategoryTypes.Tabs.Behavior)]
+        public RenderFragment<MudTabs> HeaderBefore { get; set; }
+
+        /// <summary>
+        /// A render fragment that is added after the tabs inside the header panel of the tab control
+        /// </summary>
+        [Parameter]
+        [Category(CategoryTypes.Tabs.Behavior)]
+        public RenderFragment<MudTabs> HeaderAfter { get; set; }
+
+        /// <summary>
         /// A render fragment that is added before or after (based on the value of HeaderPosition) inside each tab panel
         /// </summary>
         [Parameter]
